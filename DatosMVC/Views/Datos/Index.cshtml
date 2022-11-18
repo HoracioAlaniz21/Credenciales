@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DatosMVC.Models.Datos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<center><h2>Bienvenido</h2></center>
+
+<p>
+    @Html.ActionLink("Nuevo", "Guardar", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-responsive table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroTarjeta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCuenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contrasena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DobleContrasena)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroTarjeta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCuenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contrasena)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DobleContrasena)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.DatosId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Detalles", "Detalles", null, new { id = item.DatosId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Eliminar", "Eliminar", null, new { id = item.DatosId }, new { @class = "btn btn-primary" })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatosPersonalesModelStoreContainer" CdmEntityContainer="DatosPersonalesEntities">
+    <EntitySetMapping Name="Datos">
+      <EntityTypeMapping TypeName="DatosPersonalesModel.Datos">
+        <MappingFragment StoreEntitySet="Datos">
+          <ScalarProperty Name="DatosId" ColumnName="DatosId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NumeroTarjeta" ColumnName="NumeroTarjeta" />
+          <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="DobleContrasena" ColumnName="DobleContrasena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
